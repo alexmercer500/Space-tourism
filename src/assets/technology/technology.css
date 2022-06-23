@@ -1,0 +1,126 @@
+.tech-section {
+    background-image: url('./background-technology-mobile.jpg');
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.desktop-view {
+    display: none;
+}
+
+.tech-section img {
+    width: 100%;
+}
+
+.tech-toggle button {
+    padding: 1em 1.25em;
+    border-radius: 100%;
+    border: 1px solid var(--second-c);
+    margin: 3em 0.75em 0 0.75em;
+    color: var(--prime);
+    background-color: transparent;
+}
+
+.tech-toggle button.active {
+    background-color: var(--second-c);
+    color: #000;
+}
+
+.tech-details h1 {
+    padding: 3em 0 2em 0;
+}
+
+.technologies section {
+    padding: 2em;
+}
+
+.technologies section>* {
+    margin-block: 0.5em;
+}
+
+.technologies section h2 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    color: var(--second-c);
+}
+
+.technologies section h3 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    margin-bottom: 1em;
+}
+
+.technologies section p {
+    font-size: clamp(1rem, 5vw, 1.2rem);
+    line-height: 1.5rem;
+    color: var(--second-c);
+}
+
+.tech-toggle .btn-style {
+    background-color: var(--second-c);
+    color: #000;
+}
+
+@media (min-width:500px) {
+    .tech-section {
+        background-image: url('./background-technology-tablet.jpg');
+    }
+
+    .technologies section {
+        max-width: 400px;
+        margin-inline: auto;
+    }
+}
+
+@media (min-width:850px) {
+    .tech-section {
+        background-image: url('./background-technology-desktop.jpg');
+    }
+
+    .tech-details {
+        text-align: left;
+        max-width: 1200px;
+        margin-left: auto;
+    }
+
+    .technologies {
+        display: flex;
+        align-items: center;
+    }
+
+    .tech-toggle {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .technologies section {
+        transform: translateX(-15%);
+        max-width: 300px;
+    }
+
+    .desktop-view {
+        display: block;
+        max-width: 440px;
+    }
+
+    .mobile-view {
+        display: none;
+    }
+
+    .tech-toggle button {
+        transition: 250ms ease-in;
+    }
+}
+
+@media (min-width:1150px) {
+    .technologies section {
+        max-width: 500px;
+    }
+}
+
+@media (hover:hover) {
+    .tech-toggle button:hover {
+        background-color: var(--second-c);
+        color: #000;
+    }
+}

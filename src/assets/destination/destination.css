@@ -1,0 +1,135 @@
+.dest-section {
+    background-image: url(./background-destination-mobile.jpg);
+    background-position: center;
+    text-transform: uppercase;
+    background-size: cover;
+    color: var(--second-c);
+    text-align: center;
+    padding: 6em 2em 1em 2em;
+    min-height: 100vh;
+}
+
+.dest-section h1 span {
+    font-weight: 100;
+}
+
+.planets img {
+    max-width: 250px;
+    margin-bottom: 3em;
+}
+
+.dest-section h1,
+.dest-section h2,
+.dest-section h3,
+.dest-section p {
+    font-family: var(--base-font);
+    font-weight: 400;
+}
+
+.dest-section p {
+    font-size: clamp(1rem, 5vw, 1.2rem);
+    text-transform: lowercase;
+    font-weight: 100;
+    line-height: 1.5rem;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+    border-bottom: 1px solid var(--second-c);
+}
+
+.planet-info h2 {
+    font-size: 5rem;
+    font-family: sans-serif;
+}
+
+.planet-info h3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5em;
+    font-size: 2rem;
+}
+
+.planet-info h3 span {
+    font-size: 1rem;
+}
+
+.destination-btn .btn {
+    cursor: pointer;
+    color: var(--second-c);
+    font-size: 1.5rem;
+    font-family: var(--base-font);
+    font-weight: 400;
+    background-color: transparent;
+    border: none;
+    padding: 0.5em 0.5em;
+    transition: 250ms ease;
+}
+
+.btn.active {
+    border-bottom: 5px solid var(--prime);
+}
+
+@media (min-width:500px) {
+    .dest-section {
+        background-image: url(./background-destination-tablet.jpg);
+    }
+
+    .planet-info p {
+        max-width: 450px;
+        margin-inline: auto;
+    }
+
+    .distance-travel {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+@media (min-width:800px) {
+    .dest-section {
+        background-image: url(./background-destination-desktop.jpg);
+        text-align: left;
+    }
+    .destination {
+        max-width: 1200px;
+        margin-inline: auto;
+    }
+    .dest-heading {
+        padding-left: 2.5em;
+    }
+    .planet-info {
+        min-width: 500px;
+    }
+
+    .dest-section p {
+        margin-left: 0;
+        max-width: 500px;
+    }
+
+    .planets {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+    }
+
+    .planets img {
+        max-width: 375px;
+    }
+
+    .distance-travel h3 {
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .destination-btn .btn {
+        padding-left: 0;
+        margin-right: 1em;
+    }
+}
+
+@media (hover:hover) {
+    .destination-btn .btn:hover {
+        box-shadow: 0 5px 0 var(--prime)
+    }
+}

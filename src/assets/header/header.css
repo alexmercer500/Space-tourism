@@ -1,0 +1,142 @@
+.head-section {
+    position: absolute;
+    width: 100%;
+}
+
+.head-section nav {
+    padding: 1em 1.5em;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head-section ul {
+    position: fixed;
+    inset: 0 0 0 100%;
+    backdrop-filter: blur(25px);
+    z-index: 10;
+    transition: 250ms ease-in-out;
+}
+
+.head-section ul.active {
+    inset: 0 0 0 40%;
+}
+
+.head-section ul li {
+    position: relative;
+    cursor: pointer;
+    list-style: none;
+    margin: 1em 2em;
+    padding: 1em 0.75em;
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+
+.head-section ul li::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 75%;
+    bottom: 0;
+    transform: scale(0, 1);
+    transition: transform 250ms ease;
+    transform-origin: left;
+    display: block;
+    background-color: var(--prime);
+}
+
+.head-section ul li:hover::after {
+    transform: scale(1, 1);
+}
+.head-section ul li.active-page::after {
+    transform: scale(1, 1);
+}
+.head-section li:first-of-type {
+    margin-top: 5em;
+}
+
+.head-section li span {
+    font-weight: 500;
+    margin-right: 0.5em;
+}
+
+.nav-toggle {
+    z-index: 20;
+    cursor: pointer;
+}
+
+.nav-toggle .nav-close {
+    display: none;
+}
+
+.nav-toggle.active .nav-close {
+    display: block;
+}
+
+.nav-toggle.active .nav-open {
+    display: none;
+}
+
+@media (min-width:500px) {
+    .head-section nav {
+        padding: 0;
+    }
+
+    .head-section ul {
+        padding: 0.5em;
+        position: static;
+        display: flex;
+        background-color: rgba(31, 31, 31, 0.6);
+    }
+
+    .head-section .logo {
+        margin: 0 0 0 1em;
+    }
+
+    .head-section ul li {
+        margin: 0;
+        padding: 1em 0.75em;
+        display: flex;
+    }
+ 
+    .head-section ul li span {
+        display: none;
+    }
+
+    .head-section li:first-of-type {
+        margin-top: 0;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+}
+
+@media (min-width:950px) {
+    .head-section nav {
+        padding: 1em 0 0 3em;
+    }
+    .head-section ul {
+        padding-inline:5em;
+    }
+    .head-section ul::before {
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 80%;
+        top: 50%;
+        left: -70%;
+        background-color: rgba(121, 119, 119, 0.5);
+    }
+    .head-section ul li {
+        margin-left: 1.5em;
+        padding: 1em 0.75em;
+    }
+    .head-section a {
+        display: flex;
+    }
+    .head-section ul li span {
+        display: flex;
+    }
+}

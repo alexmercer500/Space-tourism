@@ -1,0 +1,149 @@
+.crew-section {
+    background-image: url('./background-crew-mobile.jpg');
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.crew-details {
+    padding-top: 7em;
+    text-align: center;
+}
+
+.crew-details h1 {
+    font-weight: 200;
+}
+
+.crew-details h1 span {
+    font-weight: 100;
+    color: var(--second-c);
+}
+
+.members {
+    padding: 2em;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.members section {
+    position: relative;
+    margin-top: 5em;
+}
+
+.members section h2 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    color: var(--second-c);
+    font-weight: 200;
+}
+
+.members section h3 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    font-weight: 200;
+}
+
+.members section p {
+    font-size: clamp(1rem, 5vw, 1.2rem);
+    line-height: 1.7rem;
+    margin-top: 2em;
+    min-height: 150px;
+}
+
+.crew-toggle {
+    position: absolute;
+    top: -25%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.crew-photo img {
+    height: 250px;
+    margin-inline: auto;
+}
+
+.crew-toggle button {
+    cursor: pointer;
+    padding: 0.5em;
+    border-radius: 50%;
+    background-color: teal;
+    border: none;
+    margin-inline: 0.5em;
+}
+
+@media (min-width:500px) {
+    .crew-section {
+        background-image: url('./background-crew-tablet.jpg');
+        min-height: 100vh;
+    }
+
+    .members {
+        flex-direction: column;
+    }
+
+    .members section {
+        max-width: 450px;
+        margin-inline: auto;
+    }
+
+    .crew-toggle {
+        position: static;
+        transform: translateX(0);
+    }
+
+    .members section p {
+        margin-block: 2em;
+        min-height: 110px;
+        color: var(--second-c);
+    }
+   
+    .members img {
+        /* bottom: 0;
+        left: 50%;
+        transform: translateX(-50%); */
+        /* position: absolute; */
+        margin-top: 5em;
+        width: 50%;
+        height: auto;
+        margin-inline: auto;
+    }
+}
+
+@media (min-width:920px) {
+    .crew-section {
+        background-image: url('./background-crew-desktop.jpg');
+        min-height: 100vh;
+    }
+
+    .crew-details {
+        text-align: left;
+        max-width: 1200px;
+        margin-inline: auto;
+    }
+
+    .crew-details h1 {
+        max-width: 1200px;
+        padding-inline: 2em;
+    }
+
+    .members {
+        flex-direction: row;
+    }
+
+    .members section {
+        flex: 1;
+        padding-left: 2em;
+    }
+
+    .crew-photo {
+        flex: 1;
+    }
+
+    .members img {
+        bottom: 0;
+        left: 50%;
+        position: absolute;
+        transform: translateX(50%);
+        width: 25%;
+        bottom: 0;
+        right: 50%;
+    }
+}
