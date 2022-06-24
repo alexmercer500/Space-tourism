@@ -17,7 +17,6 @@ body {
   font-family: 'Barlow Condensed', sans-serif;
   height: 100vh;
   color: var(--prime);
-  overflow: hidden;
 }
 
 h1,h2,h3,h4 {
@@ -35,4 +34,10 @@ span {
 
 button {
   cursor: pointer;
+}
+
+@media (min-width:500px) {
+  body {
+    overflow: hidden;
+  }
 }

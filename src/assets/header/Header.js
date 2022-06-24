@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import {useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import './header.css'
@@ -8,17 +8,21 @@ import navClose from '../shared/icon-close.svg'
 
 
 function Header() {
-
-  const navRef = useRef();
-  const menuRef = useRef();
-  let navMenu = navRef.current;
-  let menuBar = menuRef.current;
+  const navRef = useRef(null);
+  const menuRef = useRef(null);
   function navToggle() {
-    
-    navMenu.classList.toggle('active')
-    menuBar.classList.toggle('active')
+    navRef.current.classList.toggle("active")
+    menuRef.current.classList.toggle('active')
+    const navBtn= document.querySelectorAll('li')
+    navBtn.forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        console.log('hello there! general kenobi')
+        navRef.current.classList.remove("active")
+        menuRef.current.classList.remove('active')
+      })
+    })
+
   }
-  const navBar = document.querySelectorAll('li')
 
   return (
     <motion.div className='head-section' 

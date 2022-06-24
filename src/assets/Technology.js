@@ -1,10 +1,9 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { motion } from 'framer-motion'
 import './technology/technology.css'
 import techDetails from '../data'
 
 function Technology() {
-    const btnRef = useRef();
     const [Technology] = useState(techDetails.technology);
     const [state, setState] = useState(0)
     const [value, setValue] = useState('')
@@ -27,12 +26,6 @@ function Technology() {
         closed(false)
         setTimeout(()=>{closed(true)},500)
     }
-
-    const newStyle = {
-        background: '#fff',
-        color: '#000'
-    }
-
     return (
         <div className='tech-section'>
             <motion.div className='tech-details' initial="hidden" animate="visible" exit="exit" variants={techVariant} >
